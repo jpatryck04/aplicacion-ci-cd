@@ -1,0 +1,26 @@
+{
+  "name": "aplicacion-ci-cd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jpatryck04/aplicacion-ci-cd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jpatryck04/aplicacion-ci-cd/issues"
+  },
+  "homepage": "https://github.com/jpatryck04/aplicacion-ci-cd#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
