@@ -45,13 +45,15 @@ Este proyecto consiste en una calculadora web que permite realizar operaciones b
 - Si las pruebas pasan correctamente, se publica el contenido de la carpeta `src/` en la rama `gh-pages`.
 - GitHub Pages queda actualizado automáticamente.
 
+
+
 ---
 
 ## ✅ Pruebas Unitarias
 
 El archivo `script.js` expone funciones matemáticas que son validadas mediante `Jest`.
 
-```js
+
 // script.js
 module.exports = {
   add: (a, b) => a + b,
@@ -59,3 +61,32 @@ module.exports = {
   multiply: (a, b) => a * b,
   divide: (a, b) => b !== 0 ? a / b : "Error"
 };
+
+
+## Informe de implementación
+
+### Configuración del proyecto
+- Se creó un repositorio en GitHub.
+- Se desarrolló una calculadora web con JS.
+- Se agregó configuración para pruebas usando Jest.
+
+### Implementación del pipeline
+- Se configuró un workflow en `.github/workflows/ci.yml`.
+- Las etapas del pipeline son:
+  - Checkout del código
+  - Instalación de dependencias
+  - Ejecución de pruebas
+  - Build del proyecto
+  - Despliegue a GitHub Pages
+
+### Problemas y soluciones
+- **Problema**: Error de permisos al desplegar con `gh-pages`.
+  - **Solución**: Se configuró un token personal en los secretos (`GH_TOKEN`).
+- **Problema**: El build no se ejecutaba correctamente.
+  - **Solución**: Se ajustó el script `build` en `package.json`.
+
+### Conclusión
+El pipeline CI/CD automatiza exitosamente las pruebas y despliegue del proyecto. La integración con GitHub Pages permite mostrar la aplicación actualizada tras cada cambio.
+
+
+
